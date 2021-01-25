@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Racon">
+      <HintPath>..\..\..\Racon-0.0.2.4\Output\bin\x64\Release\Racon.dll</HintPath>
+    </Reference>
+    <Reference Include="Racon.RtiLayer">
+      <HintPath>..\..\..\Racon-0.0.2.4\Output\bin\x64\Release\Racon.RtiLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Racon.RtiLayer.Native">
+      <HintPath>..\..\..\Racon-0.0.2.4\Output\bin\x64\Release\Racon.RtiLayer.Native.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

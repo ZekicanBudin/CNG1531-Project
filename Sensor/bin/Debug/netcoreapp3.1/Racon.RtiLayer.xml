@@ -1,0 +1,2450 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Racon.RtiLayer</name>
+    </assembly>
+    <members>
+        <member name="T:Racon.RtiLayer.AttributeRegionPairs">
+            <summary>
+            HLA13: Keeps a dictionary structure for (attribute, region) pairs.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.AttributeRegionPairs.Pairs">
+            <summary>
+            Dictionary
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.AttributeRegionPairs.#ctor">
+            <summary>
+            AttributeRegionPairs constructor.
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.AttributeRegionPairs.Add(Racon.RtiLayer.HlaAttribute,Racon.RtiLayer.HlaRegion)">
+            <summary>
+            Adds an object class to object model.
+            </summary>
+            <exception cref="T:System.ArgumentException">An element with the same key already exists in the Attribute Region Pairs.</exception>
+            
+        </member>
+        <member name="M:Racon.RtiLayer.AttributeRegionPairs.GetPairs">
+            <summary>
+            Adds an interaction class to object model.
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.AttributeHandleSetRegionHandleSetPair">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.AttributeHandleSetRegionHandleSetPair.Pair">
+            <summary>
+            std:pair for C++ => KeyValuePair for .NET 3.5
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.AttributeHandleSetRegionHandleSetPair.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector.Pairs">
+            <summary>
+            std:vector for C++ => List for .NET
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaDimension">
+            <summary>
+            Dimension
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaDimension.Name">
+            <summary>
+            Region name.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaDimension.Handle">
+            <summary>
+            Handle.
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaDimension.#ctor(System.String)">
+            <summary>
+            CDimension constructor. Dimension name must be the same with the one specified in FED/FDD.
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.CallbackManager">
+            <summary>
+            Encapsulates the federate ambassador (RTI-initiated) events and its triggers.
+            </summary>
+        </member>
+        <member name="F:Racon.RtiLayer.CallbackManager.FdAmbEventQueue">
+            <summary>
+            Event Queues
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.ConnectionLost">
+            <summary>
+            4.4
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationExecutionsReported">
+            <summary>
+            // 4.8
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.SynchronizationPointRegistrationSucceeded">
+            <summary>
+            // 4.12
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.SynchronizationPointRegistrationFailed">
+            <summary>
+            // 4.12
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.SynchronizationPointAnnounced">
+            <summary>
+            // 4.13
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationSynchronized">
+            <summary>
+            // 4.15
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.InitiateFederateSave">
+            <summary>
+            // 4.17
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationSaved">
+            <summary>
+            // 4.20
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationSaveStatusResponse">
+            <summary>
+            4.23
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationRestorationRequestConfirmed">
+            <summary>
+            // 4.25
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationRestoreBegun">
+            <summary>
+            // 4.26
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.InitiateFederateRestore">
+            <summary>
+            // 4.27
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationRestored">
+            <summary>
+            // 4.29
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.FederationRestoreStatusResponse">
+            <summary>
+            4.32
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.StartRegistrationForObjectClassAdvised">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.StopRegistrationForObjectClassAdvised">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.TurnInteractionsOffAdvised">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.TurnInteractionsOnAdvised">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.ObjectDiscovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.InteractionReceived">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeValueUpdateRequested">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.ObjectRemoved">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.ObjectAttributesReflected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.TurnUpdatesOnForObjectInstanceAdvised">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.TurnUpdatesOffForObjectInstanceAdvised">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.RequestDivestitureConfirmation">
+            <summary>
+            7.5
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeOwnershipReleaseRequested">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeOwnershipInformed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeOwnershipAcquisitionNotified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeOwnershipDivestitureNotified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeOwnershipUnavailable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeOwnershipAcquisitionCancellationConfirmed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.AttributeOwnershipAssumptionRequested">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.TimeConstrainedEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.TimeRegulationEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.TimeAdvanceGrant">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.RequestRetraction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.CallbackManager.RTIEventOccured">
+            <summary>
+            General RTI Event for tracing log
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnRTIEventOccured(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            General rti event occured
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnConnectionLost(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationExecutionsReported(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnSynchronizationPointRegistrationConfirmed(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnSynchronizationPointRegistrationFailed(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnSynchronizationPointAnnounced(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationSynchronized(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnInitiateFederateSave(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnInitiateFederateRestore(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationRestorationRequestConfirmed(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationSaved(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationSaveStatusResponse(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationRestored(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationRestoreBegun(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnFederationRestoreStatusResponse(Racon.RtiLayer.HlaFederationManagementEventArgs)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnStartRegistrationForObjectClassAdvised(Racon.RtiLayer.HlaDeclarationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnStopRegistrationForObjectClassAdvised(Racon.RtiLayer.HlaDeclarationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnTurnInteractionsOnAdvised(Racon.RtiLayer.HlaDeclarationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnTurnInteractionsOffAdvised(Racon.RtiLayer.HlaDeclarationManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnObjectDiscovered(Racon.RtiLayer.HlaObjectEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnInteractionReceived(Racon.RtiLayer.HlaInteractionEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeValueUpdateRequested(Racon.RtiLayer.HlaObjectEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnObjectRemoved(Racon.RtiLayer.HlaObjectEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnObjectAttributesReflected(Racon.RtiLayer.HlaObjectEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnTurnUpdatesOnForObjectInstanceAdvised(Racon.RtiLayer.HlaObjectEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnTurnUpdatesOffForObjectInstanceAdvised(Racon.RtiLayer.HlaObjectEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnRequestDivestitureConfirmation(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            OnRequestDivestitureConfirmation
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeOwnershipReleaseRequested(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            OnAttributeOwnershipReleaseRequested
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeOwnershipInformed(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            OnAttributeOwnershipInformed
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeOwnershipAcquisitionNotified(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeOwnershipDivestitureNotified(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeOwnershipUnavailable(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeOwnershipAcquisitionCancellationConfirmed(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnAttributeOwnershipAssumptionRequested(Racon.RtiLayer.HlaOwnershipManagementEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnTimeConstrainedEnabled(Racon.RtiLayer.HlaTimeManagementEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnTimeRegulationEnabled(Racon.RtiLayer.HlaTimeManagementEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnTimeAdvanceGrant(Racon.RtiLayer.HlaTimeManagementEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.OnRequestRetraction(Racon.RtiLayer.HlaTimeManagementEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.CallbackManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.VariableLengthDataWrapper">
+            <summary>
+            a wrapper class for VariableLengthData.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.VariableLengthDataWrapper.Data">
+            <summary>
+            Data - a generic pointer for to data (char *). Getting and setting is done via AddData() and GetData() methods respectively.
+            </summary>
+        </member>
+        <member name="F:Racon.RtiLayer.VariableLengthDataWrapper.Size">
+            <summary>
+            Memory length of parameter value
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.VariableLengthDataWrapper.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.VariableLengthDataWrapper.AddData``1(``0)">
+            <summary>
+            Encode data
+            </summary>
+            <typeparam name="_type"></typeparam>
+            <param name="value"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.VariableLengthDataWrapper.GetData``1">
+            <summary>
+            Decodes the data
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.VariableLengthDataWrapper.FreeIntPtrMemory">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.VariableLengthDataWrapper.ToString">
+            <summary>
+            Returns the string of the data if convertable
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaRegion">
+            <summary>
+            CRegion
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaRegion.Name">
+            <summary>
+            Name 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaRegion.Handle">
+            <summary>
+            Handle
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaRegion.#ctor(System.String)">
+            <summary>
+             CRegion constructor.
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.SupplementalInfo">
+            <summary>
+            Base class for for supplemental info used in various federate callbacks. 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.SupplementalInfo.HasProducingFederate">
+            <summary>
+             Has Producing Federate? It is used in receive interaction service.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.SupplementalInfo.ProducingFederateHandle">
+            <summary>
+             Producing Federate handle. It is used in receive interaction service.
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.SupplementalInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.SupplementalReceiveInfo">
+            <summary>
+            Wrapper for rti1516e::SupplementalReceiveInfo. Used in Receive Interaction service.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.SupplementalReceiveInfo.HasSentRegions">
+            <summary>
+             Has Sent Regions? Not implemented !!!
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.SupplementalReceiveInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.SupplementalRemoveInfo">
+            <summary>
+            Wrapper for rti1516e::SupplementalRemoveInfo. Used in Remove Object Instance service.
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.SupplementalRemoveInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.SupplementalReflectInfo">
+            <summary>
+            Wrapper for rti1516e::SupplementalReceiveInfo. Used in Receive Interaction service.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.SupplementalReflectInfo.HasSentRegions">
+            <summary>
+             Has Sent Regions? Not implemented !!!
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.SupplementalReflectInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaProperty">
+            <summary>
+            Base class for HlaAttribute and HlaParameter
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaProperty.Name">
+            <summary>
+            Name must be the same with the attribute name in the FOM
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaProperty.Handle">
+            <summary>
+            Handle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaProperty.Value">
+            <summary>
+            Value - a generic pointer for to data (char *). Getting and setting is done via AddValue() and GetValue() methods respectively.
+            </summary>
+        </member>
+        <member name="F:Racon.RtiLayer.HlaProperty.Length">
+            <summary>
+            Memory length of parameter value
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaProperty.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaProperty.AddValue``1(``0)">
+            <summary>
+            Encode data
+            </summary>
+            <typeparam name="_type"></typeparam>
+            <param name="value"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaProperty.GetValue``1">
+            <summary>
+            Decodes the attribute value
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaProperty.FreeIntPtrMemory">
+            <summary>
+            Data Marshaling
+            String
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaInteraction">
+            <summary>
+            HLA interaction
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteraction.ClassName">
+            <summary>
+             Name of the interaction class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteraction.ClassHandle">
+            <summary>
+             Handle of the interaction class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteraction.Tag">
+            <summary>
+             Interaction tag
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteraction.Parameters">
+            <summary>
+             Parameters
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteraction.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteraction.#ctor(Racon.RtiLayer.HlaInteractionClass)">
+            <summary>
+            
+            </summary>
+            <param name="ic"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteraction.#ctor(Racon.RtiLayer.HlaInteractionClass,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ic"></param>
+            <param name="tag"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteraction.AddParameter(Racon.RtiLayer.HlaParameter)">
+            <summary>
+            
+            </summary>
+            <param name="_parameter"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteraction.AddParameterValue(Racon.RtiLayer.HlaParameter,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_parameter"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteraction.AddParameterValue(Racon.RtiLayer.HlaParameter,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="_parameter"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteraction.AddParameterValue``1(Racon.RtiLayer.HlaParameter,``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="_type"></typeparam>
+            <param name="_parameter"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.MessageRetraction">
+            <summary>
+            MessageRetraction
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.MessageRetraction.Handle">
+            <summary>
+            Message retraction handle.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.MessageRetraction.SerialNumber">
+            <summary>
+             Serial number - for HLA13 compability
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.MessageRetraction.SendingFederate">
+            <summary>
+             Sending federate handle - for HLA13 compability
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.MessageRetraction.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.MessageRetraction.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="serial"></param>
+            <param name="sender"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.MessageRetraction.#ctor(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaObject">
+            <summary>
+            HlaObject class is a wrapper for HLA object. Its instances represent the Hla objects that are exchanged in a federation and therefore it is important to deal with the RTI object management interface (e.g. for updating an attribute value of an HLA object). So, you need to encapsulate “the part” of your local data structure (in your case it is the predefined C# class used for the simulation) in a HlaObject class, where “the part” is the data needed by other federates.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObject.Name">
+            <summary>
+            Name 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObject.Handle">
+            <summary>
+            Handle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObject.Tag">
+            <summary>
+             Object tag
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObject.Type">
+            <summary>
+             Pointer to object class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObject.Attributes">
+            <summary>
+             Attributes
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.#ctor(Racon.RtiLayer.HlaObjectClass)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="oc"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.#ctor(Racon.RtiLayer.HlaObjectClass,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="oc"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.#ctor(Racon.RtiLayer.HlaObject)">
+            <summary>
+            Copy Constructor
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.AddAttribute(Racon.RtiLayer.HlaAttribute)">
+            <summary>
+            Add attribute
+            </summary>
+            <param name="attribute"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.AddAttributeValue(Racon.RtiLayer.HlaAttribute,System.String)">
+            <summary>
+            AddAttributeValue
+            </summary>
+            <param name="attribute"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.AddAttributeValue(Racon.RtiLayer.HlaAttribute,System.DateTime)">
+            <summary>
+            AddAttributeValue
+            </summary>
+            <param name="attribute"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObject.AddAttributeValue``1(Racon.RtiLayer.HlaAttribute,``0)">
+            <summary>
+            AddAttributeValue
+            </summary>
+            <typeparam name="_type"></typeparam>
+            <param name="attribute"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaParameter">
+            <summary>
+            HlaParameter
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaParameter.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaParameter.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaAttribute">
+            <summary>
+            HLA object attribute
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaAttribute.AttributePS">
+            <summary>
+            PS
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaAttribute.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaAttribute.#ctor(System.String,Racon.PSKind)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="ps"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaAttribute.ToString">
+            <summary>
+            Returns the name and handle of the attribute in form of "Name(Handle)"
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaInteractionClass">
+            <summary>
+            HLA interaction class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteractionClass.Parameters">
+            <summary>
+             Parameters
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteractionClass.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteractionClass.#ctor(System.String,Racon.PSKind)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="ps"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaObjectClass">
+            <summary>
+            HlaObjectClass
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectClass.PrivilegeToDelete">
+            <summary>
+             PrivilegeToDelete Attribute
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectClass.Attributes">
+            <summary>
+             PrivilegeToDelete Attribute
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObjectClass.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObjectClass.#ctor(System.String,Racon.PSKind)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="ps"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaClass">
+            <summary>
+            Abstract class for HLA class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaClass.Name">
+            <summary>
+            Name of the class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaClass.Handle">
+            <summary>
+            Handle of the class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaClass.ClassPS">
+            <summary>
+            PS of the class
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaClass.Tag">
+            <summary>
+             Class tag
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaClass.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaClass.#ctor(System.String,Racon.PSKind)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name"></param>
+            <param name="ps"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaInteractionEventArgs">
+            <summary>
+            Wraps an interaction received. 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteractionEventArgs.Interaction">
+            <summary>
+            interaction instance
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteractionEventArgs.RetractionHandle">
+            <summary>
+             Retraction Handle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteractionEventArgs.SupplementalReceiveInfo">
+            <summary>
+             Supplemental info.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaInteractionEventArgs.Tag">
+            <summary>
+             User-Supplied Tag.
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteractionEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteractionEventArgs.IsValueUpdated(Racon.RtiLayer.HlaParameter)">
+            <summary>
+            Is value updated?
+            </summary>
+            <param name="parameter">parameter</param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaInteractionEventArgs.GetParameterValue``1(Racon.RtiLayer.HlaParameter)">
+            <summary>
+            Gets parameter value specified by parameter reference. This function simplifies parameter decoding, so that the user does not need to iterate all parameters of an interaction 
+            </summary>
+            <param name="parameter">Parameter</param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaObjectEventArgs">
+            <summary>
+            Wraps an HLA object for receiving the values of its attributes. 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectEventArgs.ObjectInstance">
+            <summary>
+            Object instance
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectEventArgs.ClassHandle">
+            <summary>
+            ObjectClassHandle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectEventArgs.RetractionHandle">
+            <summary>
+             Retraction Handle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectEventArgs.SupplementalReflectInfo">
+            <summary>
+             Supplemental reflect info.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectEventArgs.SupplementalRemoveInfo">
+            <summary>
+             Supplemental remove info.
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaObjectEventArgs.Tag">
+            <summary>
+             User-Supplied Tag.
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObjectEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObjectEventArgs.IsValueUpdated(Racon.RtiLayer.HlaAttribute)">
+            <summary>
+            Is value updated?
+            </summary>
+            <param name="attribute">attribute</param>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaObjectEventArgs.GetAttributeValue``1(Racon.RtiLayer.HlaAttribute)">
+            <summary>
+            Gets attribute value specified by attribute reference. This function simplifies decoding value of an attribute, so that the user does not need to iterate all attributes of an object instance.
+            </summary>
+            <param name="attribute">attribute</param>
+        </member>
+        <member name="T:Racon.RtiLayer.RaconEventTypes">
+            <summary>
+            Event types 
+            </summary>
+        </member>
+        <member name="F:Racon.RtiLayer.RaconEventTypes.NA">
+            <summary>
+            The event  is used for logging purposes
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.RaconEventArgs">
+            <summary>
+            RaconEventArgs class extends the EventArgs class to convey a status message that reflects the information about the Racon and information level 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.RaconEventArgs.TraceMessage">
+            <summary>
+            Event message
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.RaconEventArgs.EventType">
+            <summary>
+            Event type
+            </summary>
+        </member>
+        <member name="F:Racon.RtiLayer.RaconEventArgs.Time">
+            <summary>
+            Time
+            </summary>
+        </member>
+        <member name="F:Racon.RtiLayer.RaconEventArgs.Level">
+            <summary>
+            LogLevel for event
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RaconEventArgs.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RaconEventArgs.#ctor(System.String)">
+            <summary>
+            constructor with 1 parameter
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RaconEventArgs.#ctor(System.String,Racon.LogLevel)">
+            <summary>
+            constructor with 2 parameters
+            </summary>
+            <param name="val"></param>
+            <param name="level"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaFederationManagementEventArgs">
+            <summary>
+            HlaFederationManagementEventArgs 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaFederationManagementEventArgs.Label">
+            <summary>
+            Federation synchronization point label
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaFederationManagementEventArgs.Reason">
+            <summary>
+            Reason. A string value for services such as ConnectionLost, FederationSaved
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaFederationManagementEventArgs.Success">
+            <summary>
+            Success/Failure. Return value for callbacks such as: requestFederationRestoreSuccedded, synchronizationPointRegistrationFailed
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaFederationManagementEventArgs.Tag">
+            <summary>
+            Tag for announceSynchronizationPoint
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaFederationManagementEventArgs.FederateHandle">
+            <summary>
+            Handle of the Federate
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaFederationManagementEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaTimeManagementEventArgs">
+            <summary>
+            HlaTimeManagementEventArgs 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaTimeManagementEventArgs.RetractionHandle">
+            <summary>
+            EventRetractionHandle
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaTimeManagementEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaDeclarationManagementEventArgs">
+            <summary>
+            CHlaDeclarationManagementEventArgs 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaDeclarationManagementEventArgs.ObjectClassHandle">
+            <summary>
+            ObjectClassHandle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaDeclarationManagementEventArgs.InteractionClassHandle">
+            <summary>
+            InteractionClassHandle
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaDeclarationManagementEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.HlaOwnershipManagementEventArgs">
+            <summary>
+            CHlaOwnershipManagementEventArgs 
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaOwnershipManagementEventArgs.ObjectHandle">
+            <summary>
+            ObjectHandle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaOwnershipManagementEventArgs.FederateHandle">
+            <summary>
+            FederateHandle
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaOwnershipManagementEventArgs.TagHLA13">
+            <summary>
+            Tag - HLA13
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaOwnershipManagementEventArgs.AttributeSet">
+            <summary>
+            AttributeSet
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.HlaOwnershipManagementEventArgs.Tag">
+            <summary>
+             User-Supplied Tag.
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.HlaOwnershipManagementEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Racon.RtiLayer.RaconAttributeSet">
+            <summary>
+            RaconAttributeSet Implements an attribute handle set empoyed in callbacks. This class is not required at RtiAmb calls. See how to call attributes w/o this class in " ChangeAttributeOrderType" - RtiAmb_Dmso.cpp
+            </summary>
+        </member>
+        <member name="P:Racon.RtiLayer.RaconAttributeSet.Attributes">
+            <summary>
+            Attributes
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RaconAttributeSet.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RaconAttributeSet.AddAttribute(Racon.RtiLayer.HlaAttribute)">
+            <summary>
+            AddAttribute
+            </summary>
+            <param name="_attr"></param>
+        </member>
+        <member name="T:Racon.RtiLayer.RtiAmb">
+            <summary>
+            This is an abstract generic class for all RTI ambassadors.  
+            </summary>
+            <remarks>
+            <para> RtiAmb (in generic layer) and CRtiAmb (in native layer) classes involve all the generic interface for RTI ambassadors. Both share the interface in such a way that the methods that have .NET arguments and return types are kept here, others are kept in CRtiAmb class which is inherited from this class</para>
+            </remarks>
+        </member>
+        <member name="P:Racon.RtiLayer.RtiAmb.RtiVersion">
+            <summary>
+            Native Rti Library
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.NoConnection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.FederationExecutionCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.FederationExecutionDestroyed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.FederateConnected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.FederateDisconnected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.FederateJoined">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.FederateResigned">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.ObjectRegistered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.HLAClassPublished">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.HLAClassSubscribed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Racon.RtiLayer.RtiAmb.RTIEventOccured">
+            <summary>
+            General RTI Event
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnNotConnected(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnNotConnected
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnFederationExecutionCreated(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnFederationExecutionCreated
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnFederationExecutionDestroyed(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnFederationExecutionDestroyed
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnFederateConnected(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnFederateConnected
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnFederateDisconnected(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnFederateDisconnected
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnFederateJoined(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnFederateJoined
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnFederateResigned(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnFederateResigned
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnObjectRegistered(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnObjectRegistered
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnHLAClassSubscribed(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnHLAClassSubscribed
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnHLAClassPublished(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnHLAClassPublished
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.OnRTIEventOccured(Racon.RtiLayer.RaconEventArgs)">
+            <summary>
+            OnRTIEventOccured
+            </summary>
+            <param name="_val"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.connect(Racon.CallbackModel,System.String)">
+            <summary>
+            IEEE1516.1-2010 4.2
+            </summary>
+            <param name="callbackModel">callbackModel</param>
+            <param name="localSettingsDesignator">localSettingsDesignator</param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disconnect">
+            <summary>
+            IEEE1516.1-2010 4.3: disconnect
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.createFederation(System.String,System.String,System.String)">
+            <summary>
+            IEEE1516.1-2010 4.5: createFederation
+            </summary>
+            <param name="fedexName">fedex Name</param>
+            <param name="fom">FDD</param>
+            <param name="logicalTimeImplementationName">logicalTimeImplementationName</param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.createFederation(System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            IEEE1516.1-2010 4.5: createFederation
+            </summary>
+            <param name="fedexName">fedex Name</param>
+            <param name="fomModules">fom Modules</param>
+            <param name="logicalTimeImplementationName">logicalTimeImplementationName</param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.createFederation(System.String,System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            IEEE1516.1-2010 4.5: createFederation
+            </summary>
+            <param name="fedexName">fedex Name</param>
+            <param name="fomModules">fom Modules</param>
+            <param name="mimModule">mimModule</param>
+            <param name="logicalTimeImplementationName">logicalTimeImplementationName</param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.destroyFederation(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.listFederationExecutions">
+            <summary>
+            IEEE1516.1-2010 4.7: listFederationExecutions
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.joinFederationExecution(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            IEEE1516.1-2010 4.9: joinFederation
+            </summary>
+            <param name="federateType"></param>
+            <param name="federationExecutionName"></param>
+            <param name="fomModules"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.joinFederationExecution(System.String,System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            IEEE1516.1-2010 4.9: joinFederation with federate name
+            </summary>
+            <param name="federateName"></param>
+            <param name="federateType"></param>
+            <param name="federationExecutionName"></param>
+            <param name="fomModules"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.joinFederationExecution(System.String,System.String)">
+            <summary>
+            HLA13 - joinFederationExecution
+            </summary>
+            <param name="federateName"></param>
+            <param name="fedexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.resignFederation(System.Int32)">
+            <summary>
+             // 4.10
+            </summary>
+            <param name="p1"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.registerFederationSynchronizationPoint(System.String,System.String)">
+            <summary>
+            // 4.11
+            </summary>
+            <param name="synchronizationPointLabel"></param>
+            <param name="userSuppliedTag"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.registerFederationSynchronizationPoint(System.String,System.String,System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            // 4.11
+            </summary>
+            <param name="synchronizationPointLabel"></param>
+            <param name="userSuppliedTag"></param>
+            <param name="setOfJoinedFederateDesignators"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.synchronizationPointAchieved(System.String,System.Boolean)">
+            <summary>
+            // 4.14
+            </summary>
+            <param name="synchronizationPointLabel"></param>
+            <param name="synchronizationSuccess"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestFederationSave(System.String)">
+            <summary>
+            // 4.16: requestFederationSave
+            </summary>
+            <param name="label"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestFederationSave(System.String,System.Double)">
+            <summary>
+            // 4.16: requestFederationSave
+            </summary>
+            <param name="label"></param>
+            <param name="p1"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.federateSaveBegun">
+            <summary>
+            // 4.18: federateSaveBegun
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.federateSaveComplete(System.Boolean)">
+            <summary>
+            // 4.19: federateSaveComplete
+            </summary>
+            <param name="p1"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.abortFederationSave">
+            <summary>
+            IEEE1516.1-2010 4.21: abortFederationSave
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryFederationSaveStatus">
+            <summary>
+            IEEE1516.1-2010 4.22: queryFederationSaveStatus
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestFederationRestore(System.String)">
+            <summary>
+            IEEE1516.1-2010 4.24: requestFederationRestore
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.federateRestoreComplete(System.Boolean)">
+            <summary>
+            IEEE1516.1-2010 4.28: federateRestoreComplete
+            </summary>
+            <param name="p1"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.abortFederationRestore">
+            <summary>
+            IEEE1516.1-2010 4.30: abortFederationRestore
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryFederationRestoreStatus">
+            <summary>
+            IEEE1516.1-2010 4.31: queryFederationRestoreStatus
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.publishInteractionClass(Racon.RtiLayer.HlaInteractionClass)">
+            <summary>
+            
+            </summary>
+            <param name="ic"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.publishObjectClass(Racon.RtiLayer.HlaObjectClass,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            
+            </summary>
+            <param name="oc"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.subscribeInteractionClass(Racon.RtiLayer.HlaInteractionClass)">
+            <summary>
+            
+            </summary>
+            <param name="ic"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.subscribeObjectClass(Racon.RtiLayer.HlaObjectClass,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="oc"></param>
+            <param name="list"></param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unsubscribeInteractionClass(Racon.RtiLayer.HlaInteractionClass)">
+            <summary>
+            
+            </summary>
+            <param name="ic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unsubscribeObjectClass(Racon.RtiLayer.HlaObjectClass)">
+            <summary>
+            
+            </summary>
+            <param name="oc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.registerObject(Racon.RtiLayer.HlaObject)">
+            <summary>
+            IEEE1516.1-2010 6.8
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.registerObject(Racon.RtiLayer.HlaObject,System.String)">
+            <summary>
+            IEEE1516.1-2010 6.8
+            </summary>
+            <param name="o"></param>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.updateAttributeValues(Racon.RtiLayer.HlaObject,Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 6.10
+            </summary>
+            <param name="obj"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.updateAttributeValues(Racon.RtiLayer.HlaObject,Racon.RtiLayer.VariableLengthDataWrapper,System.Double)">
+            <summary>
+            IEEE1516.1-2010 6.10
+            </summary>
+            <param name="obj"></param>
+            <param name="tag"></param>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.updateAttributeValues(Racon.RtiLayer.HlaObject)">
+            <summary>
+            HLA13 - updateAttributeValues
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.updateAttributeValues(Racon.RtiLayer.HlaObject,System.Double)">
+            <summary>
+            HLA13 - updateAttributeValues
+            </summary>
+            <param name="obj"></param>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.sendInteraction(Racon.RtiLayer.HlaInteraction,Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 6.12
+            </summary>
+            <param name="interaction"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.sendInteraction(Racon.RtiLayer.HlaInteraction,Racon.RtiLayer.VariableLengthDataWrapper,System.Double)">
+            <summary>
+            IEEE1516.1-2010 6.12
+            </summary>
+            <param name="interaction"></param>
+            <param name="tag"></param>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.sendInteraction(Racon.RtiLayer.HlaInteraction)">
+            <summary>
+            HLA13: sendInteraction
+            </summary>
+            <param name="interaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.sendInteraction(Racon.RtiLayer.HlaInteraction,System.Double)">
+            <summary>
+            HLA13: sendInteraction
+            </summary>
+            <param name="interaction"></param>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.deleteObjectInstance(Racon.RtiLayer.HlaObject,Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 6.14
+            </summary>
+            <param name="obj">HLA Object</param>
+            <param name="tag">User-Supplied Tag</param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.deleteObjectInstance(Racon.RtiLayer.HlaObject,Racon.RtiLayer.VariableLengthDataWrapper,System.Double)">
+            <summary>
+            IEEE1516.1-2010 6.14
+            </summary>
+            <param name="obj">HLA Object</param>
+            <param name="tag">User-Supplied Tag</param>
+            <param name="timestamp">Timestamp</param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.deleteObjectInstance(Racon.RtiLayer.HlaObject,System.String)">
+            <summary>
+            HLA13 - deleteObjectInstance
+            </summary>
+            <param name="obj"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.deleteObjectInstance(Racon.RtiLayer.HlaObject,System.Double,System.String)">
+            <summary>
+            HLA13 - deleteObjectInstance
+            </summary>
+            <param name="obj"></param>
+            <param name="time"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestAttributeValueUpdate(Racon.RtiLayer.HlaObjectClass,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 6.19
+            </summary>
+            <param name="obj"></param>
+            <param name="attributes"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestAttributeValueUpdate(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 6.19
+            </summary>
+            <param name="obj"></param>
+            <param name="attributes"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestAttributeValueUpdate(Racon.RtiLayer.HlaObjectClass,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            HLA13: requestAttributeValueUpdate - OC
+            </summary>
+            <param name="obj"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestAttributeValueUpdate(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            HLA13: requestAttributeValueUpdate - object
+            </summary>
+            <param name="obj"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unconditionalAttributeOwnershipDivestiture(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            IEEE1516.1-2010 7.2 and HLA13
+            </summary>
+            <param name="o"></param>
+            <param name="attributeSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.negotiatedAttributeOwnershipDivestiture(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 7.3 
+            </summary>
+            <param name="o"></param>
+            <param name="attributeSet"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.negotiatedAttributeOwnershipDivestiture(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},System.String)">
+            <summary>
+            HLA13: negotiatedAttributeOwnershipDivestiture
+            </summary>
+            <param name="o"></param>
+            <param name="attributeSet"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.confirmDivestiture(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516-2010 7.6
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributeSet"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.attributeOwnershipAcquisition(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 7.8 
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributeSet"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.attributeOwnershipAcquisition(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},System.String)">
+            <summary>
+            HLA13: attributeOwnershipAcquisition
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributeSet"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.attributeOwnershipAcquisitionIfAvailable(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            IEEE1516.1-2010 7.9 and HLA13 
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributeSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.attributeOwnershipReleaseDenied(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            IEEE1516-2010 7.12
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributeSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.attributeOwnershipDivestitureIfWanted(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute}@)">
+            <summary>
+            IEEE1516-2010 7.13
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributes"></param>
+            <param name="attributesDivested"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.cancelNegotiatedAttributeOwnershipDivestiture(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            IEEE1516.1-2010 7.14 and HLA13
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.cancelAttributeOwnershipAcquisition(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            IEEE1516.1-2010 7.15 and HLA13
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryAttributeOwnership(Racon.RtiLayer.HlaObject,Racon.RtiLayer.HlaAttribute)">
+            <summary>
+            IEEE1516.1-2010 7.17 and HLA13 
+            </summary>
+            <param name="o"></param>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.isAttributeOwnedByFederate(Racon.RtiLayer.HlaObject,Racon.RtiLayer.HlaAttribute)">
+            <summary>
+            IEEE1516.1-2010 7.19 and HLA13 
+            </summary>
+            <param name="o"></param>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.attributeOwnershipReleaseResponse(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            HLA13 
+            </summary>
+            <param name="theObject"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.createRegion(Racon.RtiLayer.HlaRegion,System.Collections.Generic.List{Racon.RtiLayer.HlaDimension})">
+            <summary>
+            IEEE1516.1-2010 9.2: createRegion
+            </summary>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.createRegion(System.String,System.UInt32,System.UInt32)">
+            <summary>
+            HLA13: createRegion
+            </summary>
+            <param name="regionName"></param>
+            <param name="noOfExtents"></param>
+            <param name="spaceHandle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.commitRegionModifications(System.Collections.Generic.List{Racon.RtiLayer.HlaRegion})">
+            <summary>
+            IEEE1516.1-2010 9.3: commitRegionModifications
+            </summary>
+            <param name="regions"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.deleteRegion(Racon.RtiLayer.HlaRegion)">
+            <summary>
+            IEEE1516.1-2010 9.4: deleteRegion
+            </summary>
+            <param name="region"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.registerObjectInstanceWithRegions(Racon.RtiLayer.HlaObject,Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector)">
+            <summary>
+            IEEE1516.1-2010 9.5: registerObjectInstanceWithRegions
+            </summary>
+            <param name="objectTobeRegistered"></param>
+            <param name="pairs"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.registerObjectInstanceWithRegions(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},System.Collections.Generic.List{Racon.RtiLayer.HlaRegion})">
+            <summary>
+            HLA13: registerObjectInstanceWithRegions
+            </summary>
+            <param name="objectTobeRegistered"></param>
+            <param name="attributes"></param>
+            <param name="regions"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.associateRegionsForUpdates(Racon.RtiLayer.HlaObject,Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector)">
+            <summary>
+            IEEE1516.1-2010 9.6: associateRegionForUpdates
+            </summary>
+            <param name="obj"></param>
+            <param name="pairs"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.associateRegionForUpdates(Racon.RtiLayer.HlaRegion,Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute})">
+            <summary>
+            HLA13: associateRegionForUpdates
+            </summary>
+            <param name="region"></param>
+            <param name="obj"></param>
+            <param name="attributes"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unassociateRegionsForUpdates(Racon.RtiLayer.HlaObject,Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector)">
+            <summary>
+            IEEE1516.1-2010 9.7: unAssociateRegionsForUpdates
+            </summary>
+            <param name="obj"></param>
+            <param name="pairs"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unassociateRegionForUpdates(Racon.RtiLayer.HlaRegion,Racon.RtiLayer.HlaObject)">
+            <summary>
+            HLA13
+            </summary>
+            <param name="region"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.subscribeObjectClassAttributesWithRegions(Racon.RtiLayer.HlaObjectClass,Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector,System.Boolean)">
+            <summary>
+            IEEE1516.1-2010 9.8: subscribeObjectClassAttributesWithRegions
+            </summary>
+            <param name="oc"></param>
+            <param name="pairs"></param>
+            <param name="indicator"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.subscribeObjectClassAttributesWithRegions(Racon.RtiLayer.HlaObjectClass,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},Racon.RtiLayer.HlaRegion,System.Boolean)">
+            <summary>
+            HLA13: subscribeObjectClassAttributesWithRegions
+            </summary>
+            <param name="oc"></param>
+            <param name="list"></param>
+            <param name="region"></param>
+            <param name="indicator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unsubscribeObjectClassWithRegions(Racon.RtiLayer.HlaObjectClass,Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector)">
+            <summary>
+            IEEE1516.1-2010 9.9: unsubscribeObjectClassWithRegions
+            </summary>
+            <param name="oc"></param>
+            <param name="pairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unsubscribeObjectClassWithRegions(Racon.RtiLayer.HlaObjectClass,Racon.RtiLayer.HlaRegion)">
+            <summary>
+            HLA13: unsubscribeObjectClassWithRegions
+            </summary>
+            <param name="oc"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.subscribeInteractionClassWithRegions(Racon.RtiLayer.HlaInteractionClass,System.Collections.Generic.List{Racon.RtiLayer.HlaRegion},System.Boolean)">
+            <summary>
+            IEEE1516.1-2010 9.10: subscribeInteractionClassWithRegions
+            </summary>
+            <param name="ic"></param>
+            <param name="regions"></param>
+            <param name="indicator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.subscribeInteractionClassWithRegion(Racon.RtiLayer.HlaInteractionClass,Racon.RtiLayer.HlaRegion)">
+            <summary>
+            HLA13: subscribeInteractionClassWithRegion
+            </summary>
+            <param name="ic"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unSubscribeInteractionClassWithRegions(Racon.RtiLayer.HlaInteractionClass,System.Collections.Generic.List{Racon.RtiLayer.HlaRegion})">
+            <summary>
+            IEEE1516.1-2010 9.11: unSubscribeInteractionClassWithRegions
+            </summary>
+            <param name="ic"></param>
+            <param name="regions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.unSubscribeInteractionClassWithRegion(Racon.RtiLayer.HlaInteractionClass,Racon.RtiLayer.HlaRegion)">
+            <summary>
+            HLA13: unSubscribeInteractionClassWithRegion
+            </summary>
+            <param name="ic"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.sendInteractionWithRegions(Racon.RtiLayer.HlaInteractionClass,System.Collections.Generic.List{Racon.RtiLayer.HlaRegion},Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 9.12: sendInteractionWithRegions
+            </summary>
+            <param name="ic"></param>
+            <param name="regions"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.sendInteractionWithRegions(Racon.RtiLayer.HlaInteractionClass,System.Collections.Generic.List{Racon.RtiLayer.HlaRegion},Racon.RtiLayer.VariableLengthDataWrapper,System.Double)">
+            <summary>
+            IEEE1516.1-2010 9.12: sendInteractionWithRegions with timestamp
+            </summary>
+            <param name="ic"></param>
+            <param name="regions"></param>
+            <param name="tag"></param>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.sendInteractionWithRegion(Racon.RtiLayer.HlaInteraction,Racon.RtiLayer.HlaRegion)">
+            <summary>
+            HLA13: sendInteractionWithRegion
+            </summary>
+            <param name="ic"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestClassAttributeValueUpdateWithRegions(Racon.RtiLayer.HlaObjectClass,Racon.RtiLayer.AttributeHandleSetRegionHandleSetPairVector,Racon.RtiLayer.VariableLengthDataWrapper)">
+            <summary>
+            IEEE1516.1-2010 9.13: requestClassAttributeValueUpdateWithRegions
+            </summary>
+            <param name="oc"></param>
+            <param name="pairs"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.requestClassAttributeValueUpdateWithRegion(Racon.RtiLayer.HlaObjectClass,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},Racon.RtiLayer.HlaRegion)">
+            <summary>
+            HLA13: requestClassAttributeValueUpdateWithRegion
+            </summary>
+            <param name="oc"></param>
+            <param name="attributes"></param>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableTimeRegulation(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 8.2 Enable Time Regulation
+            </summary>
+            <param name="theLookahead"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableTimeRegulation(System.Double,System.Double)">
+            <summary>
+            HLA13 - enableTimeRegulation
+            </summary>
+            <param name="theFederateTime"></param>
+            <param name="theLookahead"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disableTimeRegulation">
+            <summary>
+            IEEE1516.1-2010: 8.4 Disable Time Regulation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableTimeConstrained">
+            <summary>
+            IEEE1516.1-2010: 8.5 Enable Time Constrained
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disableTimeConstrained">
+            <summary>
+            IEEE1516.1-2010: 8.7 Disable Time Constrained
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.timeAdvanceRequest(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 8.8 Time Advance Request
+            </summary>
+            <param name="theTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.timeAdvanceRequestAvailable(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 8.9 Time Advance Request Available
+            </summary>
+            <param name="theTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.nextMessageRequest(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 8.10 Next Message Request
+            </summary>
+            <param name="logicalTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.nextEventRequest(System.Double)">
+            <summary>
+            HLA13: nextEventRequest
+            </summary>
+            <param name="logicalTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.nextMessageRequestAvailable(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 8.11 Next Message Request Available
+            </summary>
+            <param name="logicalTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.nextEventRequestAvailable(System.Double)">
+            <summary>
+            HLA13: nextEventRequestAvailable
+            </summary>
+            <param name="logicalTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.flushQueueRequest(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 8.12 Flush Queue Request
+            </summary>
+            <param name="logicalTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableAsynchronousDelivery">
+            <summary>
+            IEEE1516.1-2010: 8.14 Enable Asynchronous Delivery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disableAsynchronousDelivery">
+            <summary>
+            IEEE1516.1-2010: 8.15 Disable Asynchronous Delivery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryGALT(System.Double@)">
+            <summary>
+            IEEE1516.1-2010: 8.16 Query Greatest Available Logical Time (GALT)
+            </summary>
+            <param name="Galt">Optional current value of invoking joined federate’s GALT</param>
+            <returns>GALT definition indicator returns True if GALT is defined</returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryLBTS">
+            <summary>
+            HLA13 - queryLBTS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryLogicalTime">
+            <summary>
+            IEEE1516.1-2010: 8.17 Query Logical Time
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryFederateTime">
+            <summary>
+            HLA13 - queryFederateTime
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryLITS(System.Double@)">
+            <summary>
+            IEEE1516.1-2010: 8.18 Query List Incoming Time Stamp (LIST)
+            </summary>
+            <param name="Lits">Optional current value of invoking joined federate’s LITS</param>
+            <returns>LITS definition indicator returns True if LIST is defined</returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryMinNextEventTime">
+            <summary>
+            HLA13 - queryMinNextEventTime
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.modifyLookahead(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 8.19 Modify Lookahead
+            </summary>
+            <param name="theLookahead"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.queryLookahead">
+            <summary>
+            IEEE1516.1-2010: 8.20 Query Lookahead
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.retract(Racon.RtiLayer.MessageRetraction)">
+            <summary>
+            IEEE1516.1-2010: 8.21 Retracts the message with specified retraction handle.
+            </summary>
+            <param name="retraction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.changeAttributeOrderType(Racon.RtiLayer.HlaObject,System.Collections.Generic.List{Racon.RtiLayer.HlaAttribute},System.UInt32)">
+            <summary>
+            IEEE1516.1-2010: 8.23 Change Attribute Order Type
+            </summary>
+            <param name="theObject"></param>
+            <param name="theAttributes"></param>
+            <param name="theType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.changeInteractionOrderType(Racon.RtiLayer.HlaInteractionClass,System.UInt32)">
+            <summary>
+            IEEE1516.1-2010: 8.24 Change Interaction Order Type
+            </summary>
+            <param name="theClass"></param>
+            <param name="theType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getFederateHandle(System.String)">
+            <summary>
+            IEEE1516.1-2010 10.4: getFederateHandle
+            </summary>
+            <param name="federateName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getFederateName(System.UInt32)">
+            <summary>
+            IEEE1516.1-2010 10.5: getFederateName
+            </summary>
+            <param name="federateHandle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getDimensionHandle(System.String)">
+            <summary>
+            IEEE1516.1-2010 10.25
+            </summary>
+            <param name="name">Dimension name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getDimensionHandle(System.String,System.UInt32)">
+            <summary>
+            HLA13: getDimensionHandle
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getDimensionName(System.UInt32)">
+            <summary>
+            IEEE1516.1-2010 10.26
+            </summary>
+            <param name="handle">Dimension handle</param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.setRangeBounds(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            IEEE1516.1-2010 10.30
+            </summary>
+            <param name="regionHandle"></param>
+            <param name="dimensionHandle"></param>
+            <param name="lowerBound"></param>
+            <param name="upperBound"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableObjectClassRelevanceAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.33 enableObjectClassRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disableObjectClassRelevanceAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.34 disableObjectClassRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableAttributeRelevanceAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.35 enableAttributeRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disableAttributeRelevanceAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.36 disableAttributeRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableAttributeScopeAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.37 disableAttributeRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disableAttributeScopeAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.38 disableAttributeRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.enableInteractionRelevanceAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.39 enableInteractionRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.disableInteractionRelevanceAdvisorySwitch">
+            <summary>
+            IEEE1516.1-2010: 10.40 disableInteractionRelevanceAdvisorySwitch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.evokeCallback(System.Double)">
+            <summary>
+            IEEE1516.1-2010: 10.41 evokeCallback
+            </summary>
+            <param name="approximateMinimumTimeInSeconds"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.evokeMultipleCallbacks(System.Double,System.Double)">
+            <summary>
+            IEEE1516.1-2010: 10.42 evokeMultipleCallbacks
+            </summary>
+            <param name="approximateMinimumTimeInSeconds"></param>
+            <param name="approximateMaximumTimeInSeconds"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getSpaceHandle(System.String)">
+            <summary>
+            HLA13 - getSpaceHandle
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getClassHandleFromRti(Racon.RtiLayer.HlaInteractionClass)">
+            <summary>
+            getClassHandleFromRti
+            </summary>
+            <param name="ic"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getClassHandleFromRti(Racon.RtiLayer.HlaObjectClass)">
+            <summary>
+            getClassHandleFromRti
+            </summary>
+            <param name="oc"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getParameterHandlesFromRti(Racon.RtiLayer.HlaInteractionClass)">
+            <summary>
+            getParameterHandlesFromRti
+            </summary>
+            <param name="ic"></param>
+        </member>
+        <member name="M:Racon.RtiLayer.RtiAmb.getAttributeHandlesFromRti(Racon.RtiLayer.HlaObjectClass)">
+            <summary>
+            getAttributeHandlesFromRti
+            </summary>
+            <param name="oc"></param>
+        </member>
+        <member name="T:Racon.NamespaceDoc">
+            <summary>
+            This package presents a generic RTI layer.
+            </summary>
+            
+            <remarks>
+            The RTI library, called RtiLayer, is the major portion of the .NET wrapper that abstracts the RTI services and makes transparent the use of both 
+            •	the various HLA specifications (e.g.DoD HLA 1.3 specification, IEEE 1516-2000 standard, and HLA Evolved and 
+            •	the various vendor specific RTI implementation for the same specification (e.g. Portico, DMSO RTI 1.3 NG). Another approach to a generic RTI abstraction is to use the dynamic link compatible HLA API standard.
+            </remarks>
+            
+        </member>
+        <member name="T:Racon.CallbackModel">
+            <summary>
+            Callback model - used in connect() service
+            </summary>
+        </member>
+        <member name="F:Racon.CallbackModel.IMMEDIATE">
+            <summary>
+            The RTI shall invoke callbacks immediately when they are available unless the callbacks have been     disabled using the Disable Callbacks service
+            </summary>
+        </member>
+        <member name="F:Racon.CallbackModel.EVOKED">
+            <summary>
+            Callbacks are only made when the federate calls the Evoke Callback/Evoke Multiple Callbacks services, unless callbacks have been disabled using the Disable Callbacks service.
+            </summary>
+        </member>
+        <member name="T:Racon.PSKind">
+            <summary>
+            Enum Object Class Publication and Subscription Capabilities
+            </summary>
+        </member>
+        <member name="F:Racon.PSKind.Publish">
+            <summary>
+            Publish
+            </summary>
+        </member>
+        <member name="F:Racon.PSKind.Subscribe">
+            <summary>
+            Subscribe
+            </summary>
+        </member>
+        <member name="F:Racon.PSKind.PublishSubscribe">
+            <summary>
+            Both Publish and Subscribe
+            </summary>
+        </member>
+        <member name="F:Racon.PSKind.Neither">
+            <summary>
+            Neither Publish or Subscribe
+            </summary>
+        </member>
+        <member name="T:Racon.LogLevel">
+            <summary>
+            Enum debugging and information level
+            <![CDATA[ ALL < TRACE < INFO < WARN < ERROR < OFF ]]>
+            </summary>
+        </member>
+        <member name="F:Racon.LogLevel.ALL">
+            <summary>
+            All info is provided about RACoN events
+            </summary>
+        </member>
+        <member name="F:Racon.LogLevel.TRACE">
+            <summary>
+            This level provides detailed information about events including handles. Debug Level
+            </summary>
+        </member>
+        <member name="F:Racon.LogLevel.INFO">
+            <summary>
+            Only important info is provided.
+            </summary>
+        </member>
+        <member name="F:Racon.LogLevel.WARN">
+            <summary>
+            Reports incorrect behavior, but RTI can continue. Production level
+            </summary>
+        </member>
+        <member name="F:Racon.LogLevel.ERROR">
+            <summary>
+            Reports application crashes, Racon must stop
+            </summary>
+        </member>
+        <member name="F:Racon.LogLevel.OFF">
+            <summary>
+            No information is provided
+            </summary>
+        </member>
+        <member name="T:Racon.Encoder">
+            <summary>
+            Encoder for data exchange through the RTI.
+            </summary>
+        </member>
+        <member name="M:Racon.Encoder.Encode``1(``0,System.Int32@)">
+            <summary>
+            Data Marshaling: encodes data and gives its size
+            
+            Supported Data types: String, DateTime (non-blittable), Value types (Only Blittables) 
+            Value Types: (1) Structs (2) Enumerations (as System.Int32)
+            Structs: (1) Numeric Types (2) bool (System.Boolean) (3) User-defined Structs
+            Numeric Types: (1) Integral types (2) Floating-point Types (3) decimal (System.Decimal)
+            Integral Types: sbyte, byte, char, short, ushort, int, uint, long, ulong 
+            Floating-point Types: float (System.Single), double (System.Double) 
+            </summary>
+        </member>
+        <member name="M:Racon.Encoder.Decode``1(System.IntPtr)">
+            <summary>
+            Decodes the data
+            </summary>
+        </member>
+    </members>
+</doc>
