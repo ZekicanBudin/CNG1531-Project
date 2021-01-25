@@ -111,7 +111,6 @@ namespace DatasetCollection
                 manager.SynchronData += data.Label.Substring(7);
                 Console.WriteLine("SENSOR DATA RECEIVED!");
             }
-
             else if(data.Label.StartsWith("Human_"))
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
