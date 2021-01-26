@@ -44,7 +44,7 @@ namespace DatasetCollection
             base.FdAmb_TurnInteractionsOnAdvisedHandler(sender, data);
 
             #region User Code
-            Console.WriteLine("Send interactions.");
+            Console.WriteLine("Can send interactions.");
             //throw new NotImplementedException("FdAmb_TurnInteractionsOnAdvisedHandler");
             #endregion //User Code
         }
@@ -65,7 +65,7 @@ namespace DatasetCollection
         {
             // Call the base class handler
             base.FdAmb_StartRegistrationForObjectClassAdvisedHandler(sender, data);
-            //RegisterHlaObject(manager);
+            
             #region User Code
             //throw new NotImplementedException("FdAmb_StartRegistrationForObjectClassAdvisedHandler");
             #endregion //User Code
