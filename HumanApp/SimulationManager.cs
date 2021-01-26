@@ -126,7 +126,7 @@ namespace DatasetCollection
                     {
                         Console.WriteLine("SENT> " + input + Environment.NewLine);
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        SynchronData = input;
+                        SynchronData = "Human_"+input;
                         federate.RegisterFederationSynchronizationPoint(SynchronData, "Appended");
                     }
                     federate.Run();
